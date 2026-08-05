@@ -1,9 +1,11 @@
+"use strict";
 /**
  * Enums or  Enumeration
  * const INITIALISED = "initialised"
  * Ticket ["initialized", "cancelled","resolved","pending"];
  * ti.status == "resolved"
  */
+Object.defineProperty(exports, "__esModule", { value: true });
 var TicketStatus;
 (function (TicketStatus) {
     TicketStatus["INITIALISED"] = "initialised";
@@ -14,8 +16,8 @@ var TicketStatus;
 console.log(TicketStatus.INITIALISED);
 console.log(TicketStatus.CANCELLED);
 console.log(TicketStatus.PENDING);
-console.log(TicketStatus.CLOSED); 
-var Ticket = {
+console.log(TicketStatus.CLOSED);
+const Ticket = {
     id: 1,
     title: "new ticket",
     status: TicketStatus.INITIALISED
@@ -31,14 +33,14 @@ var StatusCodes;
     StatusCodes[StatusCodes["Created"] = 201] = "Created";
     StatusCodes[StatusCodes["BadRequest"] = 400] = "BadRequest";
 })(StatusCodes || (StatusCodes = {}));
-var response = {
+const response = {
     url: "www.something.com",
     type: "get",
     data: "something",
     status: StatusCodes.Success
 };
 console.log(response);
-var result = {
+const result = {
     name: "sumit",
     marks: 98
 };
@@ -52,22 +54,23 @@ console.log(result);
 // updating an old key value pair 
 result.marks = 99; // do you think ts will allow this?
 // Details is kind of like an alias or a nickname to {name: string,marks: number, address?: string}
-var result1 = {
+const result1 = {
     name: "sumit",
     marks: 98
 };
-var result2 = {
+const result2 = {
     name: 'Rahul',
     marks: 99
 };
-var loginForm = {
+const loginForm = {
     name: "Login form",
     submitButtonText: 'Login',
-    onReset: function (e) {
+    onReset: (e) => {
         //some implementation
     },
-    onSubmit: function (e) {
+    onSubmit: (e) => {
         // some implementation
     }
 };
 console.log(loginForm);
+// can type and interfaces represent function?

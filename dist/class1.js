@@ -1,3 +1,4 @@
+"use strict";
 /**
  * below are all primitive types in js
  * string -> store text
@@ -8,18 +9,19 @@
  * bigint
  * symbol
  */
-var id = 5;
-var firstName = "sumit"; // ts undersands firstName will store strings; 
+Object.defineProperty(exports, "__esModule", { value: true });
+let id = 5;
+let firstName = "sumit"; // ts undersands firstName will store strings; 
 // firstName = 12 ; typescript throw error 
 var lastName = "sumit";
 // lastName = 13; typescript throw error. 
 console.log(id, firstName);
 // client aur server wala example bataya sir ne. 
 // union of types  
-var userId = "26";
+let userId = "26";
 userId = 10;
 console.log(userId);
-var x = 10;
+let x = 10;
 x = "sumit";
 x = false;
 console.log(x);
@@ -28,13 +30,13 @@ console.log(x);
  * arrays
  * let<variable_name: type[] = [val1,val2,........]
  */
-var ids = [1, 2, 3, 4, 5];
+let ids = [1, 2, 3, 4, 5];
 console.log(ids);
-var hetro = [1, 2, 3, "false", null];
-var data = [1, "sumit", true];
+let hetro = [1, 2, 3, "false", null];
+let data = [1, "sumit", true];
 console.log(ids, hetro, data);
 // arrays in from of typed tuples
-var data1 = [1, "sumit", true];
+let data1 = [1, "sumit", true];
 console.log(data1);
 /**
  * how to define types for objects
@@ -42,21 +44,21 @@ console.log(data1);
  * interfaces -> it's a contract
  *
  */
-var Car = /** @class */ (function () {
-    function Car(name) {
+class Car {
+    name;
+    constructor(name) {
         this.name = name;
     }
-    Car.prototype.display = function () {
+    display() {
         console.log(this.name);
-    };
-    return Car;
-}());
+    }
+}
 ;
-var p1 = {
+let p1 = {
     name: "Iphone",
     price: 1000000,
     brand: "apple",
-    display: function () {
+    display: () => {
         console.log("display");
     }
 };
@@ -66,7 +68,7 @@ var p1 = {
 //     brand: "hyundai"
 // }
 console.log(p1);
-var c1 = new Car("santro");
+let c1 = new Car("santro");
 function sum(a, b) {
     return a + b;
 }
@@ -77,7 +79,7 @@ function sum1(a, b) {
 }
 console.log(sum1(10));
 // date object in typescript 
-var dob = new Date(1998, 3, 11);
+const dob = new Date(1998, 3, 11);
 console.log(dob);
 console.log(dob.getDate());
 /**
@@ -86,7 +88,7 @@ console.log(dob.getDate());
  * to don't assign a value while decelaring a variable
  *
  */
-var y; // this variable x is of type any 
+let y; // this variable x is of type any 
 y = '10';
 y = 10;
 function fun() {
