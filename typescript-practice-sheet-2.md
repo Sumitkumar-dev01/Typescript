@@ -1,4 +1,4 @@
-# TypeScript Practice Sheet 2 (Modules, Config, Async & Advanced Types)
+c# TypeScript Practice Sheet 2 (Modules, Config, Async & Advanced Types)
 
 Continuation of sheet 1. This one covers the parts of the language you need before touching a framework: how modules and types move between files, what `tsconfig.json` actually does, async typing, and the type-system features that show up constantly in real code.
 
